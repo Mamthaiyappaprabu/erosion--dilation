@@ -1,4 +1,4 @@
-# Implementation-of-Erosion-and-Dilation
+# Implementation-of-Erosion-and-Dilation :
 ## Aim
 To implement Erosion and Dilation using Python and OpenCV.
 ## Software Required
@@ -6,74 +6,75 @@ To implement Erosion and Dilation using Python and OpenCV.
 2. OpenCV
 ## Algorithm:
 ### Step1:
-<br>
+<br>Import the necessary pacakages
 
 
 ### Step2:
-<br>
+<br>Import the necessary pacakages
 
 ### Step3:
-<br>
+<br>Create the structuring element
 
 ### Step4:
-<br>
+<br>Erode the image
 
 ### Step5:
-<br>
+<br>Dilate the Image
 
  
 ## Program:
+### Developed by : MAMTHA I
+### Reg no : 212222230076
 
 ``` Python
-# Import the necessary packages
+# Import the necessary packages :
 
+import numpy as np
+import cv2
+import matplotlib.pyplot as plt
 
+# Create the Text using cv2.putText :
 
-# Create the Text using cv2.putText
+img = np.zeros((100,400),dtype = 'uint8')
+font = cv2.FONT_HERSHEY_SIMPLEX
+cv2.putText(img ,'MAMTHA',(60,70),font,2,(255),5,cv2.LINE_AA)
+plt.imshow(img)
+plt.axis('off')
 
+# Create the structuring element :
 
+kernel = np.ones((5,5),np.uint8)
+kernel1 = cv2.getStructuringElement(cv2.MORPH_CROSS,(5,5))
+cv2.erode(img,kernel)
 
-# Create the structuring element
+# Erode the image :
 
+img_erode = cv2.erode(img,kernel1)
+plt.imshow(img_erode)
+plt.axis('off')
 
+# Dilate the image :
 
-# Erode the image
-
-
-
-
-# Dilate the image
-
-
-
-
+img_dilate = cv2.dilate(img,kernel1)
+plt.imshow(img_dilate)
+plt.axis('off')
 
 ```
 ## Output:
 
-### Display the input Image
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+## Display the input Image :
 
-### Display the Eroded Image
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+![image](https://github.com/Mamthaiyappaprabu/erosion--dilation/assets/119393563/5ae603be-89fe-4c29-97f1-4a233d9ae49a)
 
-### Display the Dilated Image
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+## Display the Eroded Image:
+![image](https://github.com/Mamthaiyappaprabu/erosion--dilation/assets/119393563/c59971ed-5805-486a-a115-35187ca7114b)
+
+
+## Display the Dilated Image :
+![image](https://github.com/Mamthaiyappaprabu/erosion--dilation/assets/119393563/a5548d54-ea31-4441-8481-b6291367409e)
+
 
 ## Result
 Thus the generated text image is eroded and dilated using python and OpenCV.
